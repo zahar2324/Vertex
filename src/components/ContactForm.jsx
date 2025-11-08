@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { MessageCircle, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../config/emailjs';
 
 function ContactForm({ onClose }) {
   const [formData, setFormData] = useState({
@@ -33,7 +35,7 @@ function ContactForm({ onClose }) {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!validateForm()) {
@@ -41,19 +43,51 @@ function ContactForm({ onClose }) {
     }
     
     setIsSubmitting(true);
-    // Handle form submission
-    console.log('Form submitted:', formData);
     
-    // Simulate API call
-    setTimeout(() => {
-      // Reset form
+    try {
+      // Перевірка чи налаштовані ключі EmailJS
+      if (!EMAILJS_CONFIG.PUBLIC_KEY || 
+          !EMAILJS_CONFIG.SERVICE_ID || 
+          !EMAILJS_CONFIG.TEMPLATE_ID ||
+          EMAILJS_CONFIG.PUBLIC_KEY === 'YOUR_PUBLIC_KEY' ||
+          EMAILJS_CONFIG.SERVICE_ID === 'YOUR_SERVICE_ID' ||
+          EMAILJS_CONFIG.TEMPLATE_ID === 'YOUR_TEMPLATE_ID') {
+        console.error('EmailJS не налаштовано! Будь ласка, додайте ключі в src/config/emailjs.js');
+        alert('Помилка: EmailJS не налаштовано. Перевірте конфігурацію.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Ініціалізація EmailJS
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+
+      // Параметри для шаблону
+      const templateParams = {
+        from_name: formData.name,
+        from_phone: formData.phone,
+        message: formData.message,
+        to_email: EMAILJS_CONFIG.TO_EMAIL,
+        reply_to: formData.phone
+      };
+
+      // Відправка email
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams
+      );
+
+      // Успішна відправка
       setFormData({ name: '', phone: '', message: '' });
       setErrors({});
-      setIsSubmitting(false);
-      // Show success message
       alert('Дякуємо за заявку! Ми зв\'яжемося з вами найближчим часом.');
       if (onClose) onClose();
-    }, 500);
+    } catch (error) {
+      console.error('Помилка відправки email:', error);
+      alert('Помилка відправки форми. Спробуйте пізніше або зв\'яжіться з нами напряму.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -131,10 +165,10 @@ function ContactForm({ onClose }) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`w-full py-4 rounded-lg font-semibold text-lg transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center ${
+          className={`w-full py-4 rounded-lg font-semibold text-lg shadow-lg flex items-center justify-center ${
             isSubmitting
               ? 'bg-gray-400 cursor-not-allowed'
-              : 'bg-blue-600 text-white hover:bg-blue-700'
+              : 'btn-primary btn-shine text-white relative overflow-hidden cursor-pointer'
           }`}
         >
           {isSubmitting ? (

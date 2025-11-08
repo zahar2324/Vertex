@@ -9,12 +9,12 @@ function Hero({ onOpenModal }) {
               ПРОФЕСІЙНИЙ ЗАПУСК САЙТА
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-              Створимо ефективний сайт за 7 днів, без зайвих питань. Оплата після замовлення. 
-              Вартість - від 300 $. Зручно, швидко, з гарантією 5 років
+            Створимо для вас зручний та ефективний односторінковий сайт - 400$. Навчимо керувати сайтом та будемо постійно підтримувати вашу роботу - безкоштовно
+
             </p>
             <button 
               onClick={onOpenModal}
-              className="bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="btn-primary btn-shine text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg relative overflow-hidden cursor-pointer"
             >
               ЗАЛИШИТИ ЗАЯВКУ
             </button>
