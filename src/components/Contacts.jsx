@@ -160,7 +160,7 @@ function Contacts({ onOpenModal }) {
                 </a>
                 <a href="mailto:vlmarketing.com.ua@gmail.com" className="flex items-center text-gray-700 hover:text-blue-600 transition">
                   <Mail className="w-5 h-5 mr-3 text-blue-600" />
-                  <span>vlmarketing.com.ua@gmail.com</span>
+                  <span>vertex-web.com.ua@gmail.com</span>
                 </a>
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-blue-600" />

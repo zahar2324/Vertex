@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -45,6 +46,8 @@ function App() {
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <ContactForm onClose={closeModal} />
       </Modal>
+      
+      <Analytics />
     </div>
   )
 }

@@ -15,7 +15,7 @@ function Footer() {
               </a>
               <a href="mailto:vlmarketing.com.ua@gmail.com" className="flex items-center hover:text-blue-400 transition">
                 <Mail className="w-5 h-5 mr-3" />
-                <span>vlmarketing.com.ua@gmail.com</span>
+                <span>vertex-web.com.ua@gmail.com</span>
               </a>
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 mr-3 mt-1 flex-shrink-0" />
@@ -53,7 +53,7 @@ function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>© VLM Digital 2019-2026. All Right Reserved. by VLM Digital.</p>
+          <p>© Vertex 2019-2026. All Right Reserved. by Vertex.</p>
         </div>
       </div>
     </footer>

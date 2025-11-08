@@ -20,9 +20,9 @@ function Header({ onOpenModal }) {
           {/* Logo */}
           <div className="flex items-center">
             <span className="text-2xl font-bold text-gray-900">
-              <span className="text-blue-600">VLM</span> Digital
+              <span className="text-blue-600">Vertex</span>
             </span>
-            <span className="text-xs text-gray-500 ml-2 hidden sm:block">MARKETING AGENCY</span>
+            <span className="text-xs text-gray-500 ml-2 hidden sm:block">ДІДЖИТАЛ АГЕНЦІЯ</span>
           </div>
 
           {/* Desktop Navigation */}

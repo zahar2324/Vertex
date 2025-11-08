@@ -191,7 +191,7 @@ function ContactForm({ onClose }) {
       </div>
       
       <p className="text-sm text-gray-500 mt-4 text-center">
-        Ваші дані захищені політикою конфіденційності компанії VLM Digital.
+        Ваші дані захищені політикою конфіденційності компанії Vertex.
       </p>
     </div>
   );
