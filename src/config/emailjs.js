@@ -12,3 +12,4 @@ export const EMAILJS_CONFIG = {
   TO_EMAIL: 'frontend2024zahar@gmail.com' // Ваш email для отримання листів
 };
 
+ 

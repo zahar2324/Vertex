@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Phone, X, MessageCircle } from 'lucide-react';
+import { Phone, X } from 'lucide-react';
+import { FaTelegram, FaInstagram, FaViber, FaWhatsapp } from 'react-icons/fa';
 
 function FloatingContactButton() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,27 +26,27 @@ function FloatingContactButton() {
   const socialLinks = [
     {
       name: 'Telegram',
-      href: 'https://t.me/vlmdigital',
+      href: 'https://t.me/zaharFront',
       color: 'bg-blue-500 hover:bg-blue-600',
-      icon: MessageCircle
+      icon: FaTelegram
     },
     {
       name: 'Viber',
       href: 'viber://chat?number=+380506782481',
       color: 'bg-purple-500 hover:bg-purple-600',
-      icon: MessageCircle
+      icon: FaViber
     },
     {
       name: 'WhatsApp',
       href: 'https://wa.me/380506782481',
       color: 'bg-green-500 hover:bg-green-600',
-      icon: MessageCircle
+      icon: FaWhatsapp
     },
     {
       name: 'Instagram',
-      href: 'https://www.instagram.com/vlmdigital',
+      href: 'https://www.instagram.com/your_instagram',
       color: 'bg-pink-500 hover:bg-pink-600',
-      icon: MessageCircle
+      icon: FaInstagram
     }
   ];
 

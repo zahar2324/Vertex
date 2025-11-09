@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { MessageCircle, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
+import { FaTelegram, FaInstagram, FaFacebook, FaViber, FaWhatsapp } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs';
 
@@ -188,19 +189,19 @@ function ContactForm({ onClose }) {
         </p>
         <div className="flex flex-wrap justify-center gap-3">
           <a
-            href="https://t.me/vlmdigital"
+            href="https://t.me/zaharFront"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition text-sm"
           >
-            <MessageCircle className="w-4 h-4 mr-2" />
+            <FaTelegram className="w-4 h-4 mr-2" />
             Telegram
           </a>
           <a
             href="viber://chat?number=+380506782481"
             className="flex items-center px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition text-sm"
           >
-            <MessageCircle className="w-4 h-4 mr-2" />
+            <FaViber className="w-4 h-4 mr-2" />
             Viber
           </a>
           <a
@@ -209,17 +210,26 @@ function ContactForm({ onClose }) {
             rel="noopener noreferrer"
             className="flex items-center px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition text-sm"
           >
-            <MessageCircle className="w-4 h-4 mr-2" />
+            <FaWhatsapp className="w-4 h-4 mr-2" />
             WhatsApp
           </a>
           <a
-            href="https://www.instagram.com/vlmdigital"
+            href="https://www.instagram.com/your_instagram"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition text-sm"
           >
-            <MessageCircle className="w-4 h-4 mr-2" />
+            <FaInstagram className="w-4 h-4 mr-2" />
             Instagram
+          </a>
+          <a
+            href="https://www.facebook.com/your_facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm"
+          >
+            <FaFacebook className="w-4 h-4 mr-2" />
+            Facebook
           </a>
         </div>
       </div>

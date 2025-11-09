@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import { FaTelegram, FaInstagram, FaFacebook, FaViber, FaWhatsapp } from 'react-icons/fa';
 
 function Header({ onOpenModal }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,11 +51,11 @@ function Header({ onOpenModal }) {
               ПРО НАС
             </a>
             <a 
-              href="#projects" 
-              onClick={(e) => handleNavClick(e, '#projects')}
+              href="#reviews" 
+              onClick={(e) => handleNavClick(e, '#reviews')}
               className="text-gray-700 hover:text-blue-600 transition font-medium"
             >
-              ПРОЕКТИ
+              ВІДГУКИ
             </a>
             <a 
               href="#contacts" 
@@ -75,14 +76,32 @@ function Header({ onOpenModal }) {
               <span>050-678-24-81</span>
             </a>
             <div className="hidden lg:flex items-center space-x-2">
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-blue-100 transition">
-                <Phone className="w-4 h-4 text-gray-700" />
+              <a 
+                href="https://t.me/zaharFront" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-blue-500 hover:text-white transition"
+                aria-label="Telegram"
+              >
+                <FaTelegram className="w-4 h-4 text-gray-700 hover:text-white" />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-blue-100 transition">
-                <span className="text-xs">TG</span>
+              <a 
+                href="https://www.instagram.com/your_instagram" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-pink-500 hover:text-white transition"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="w-4 h-4 text-gray-700 hover:text-white" />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-blue-100 transition">
-                <span className="text-xs">IG</span>
+              <a 
+                href="https://www.facebook.com/your_facebook" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-blue-600 hover:text-white transition"
+                aria-label="Facebook"
+              >
+                <FaFacebook className="w-4 h-4 text-gray-700 hover:text-white" />
               </a>
             </div>
             <button 
@@ -128,11 +147,11 @@ function Header({ onOpenModal }) {
                 ПРО НАС
               </a>
               <a 
-                href="#projects" 
-                onClick={(e) => handleNavClick(e, '#projects')}
+                href="#reviews" 
+                onClick={(e) => handleNavClick(e, '#reviews')}
                 className="text-gray-700 hover:text-blue-600 transition font-medium"
               >
-                ПРОЕКТИ
+                ВІДГУКИ
               </a>
               <a 
                 href="#contacts" 

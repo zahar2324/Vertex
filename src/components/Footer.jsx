@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { FaTelegram, FaInstagram, FaFacebook, FaViber, FaWhatsapp } from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -31,7 +32,7 @@ function Footer() {
               <a href="#home" className="hover:text-blue-400 transition">Головна</a>
               <a href="#services" className="hover:text-blue-400 transition">Послуги</a>
               <a href="#about" className="hover:text-blue-400 transition">Про нас</a>
-              <a href="#projects" className="hover:text-blue-400 transition">Проекти</a>
+              <a href="#reviews" className="hover:text-blue-400 transition">Відгуки</a>
             </nav>
           </div>
 
@@ -39,14 +40,48 @@ function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Соціальні мережі</h3>
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition">
-                <span className="text-sm">TG</span>
+              <a 
+                href="https://t.me/zaharFront" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-800 p-3 rounded-full hover:bg-blue-500 transition text-white"
+                aria-label="Telegram"
+              >
+                <FaTelegram className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition">
-                <span className="text-sm">VB</span>
+              <a 
+                href="https://www.instagram.com/your_instagram" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-800 p-3 rounded-full hover:bg-pink-500 transition text-white"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition">
-                <span className="text-sm">WA</span>
+              <a 
+                href="https://www.facebook.com/your_facebook" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition text-white"
+                aria-label="Facebook"
+              >
+                <FaFacebook className="w-5 h-5" />
+              </a>
+              <a 
+                href="viber://chat?number=+380506782481" 
+                className="bg-gray-800 p-3 rounded-full hover:bg-purple-500 transition text-white"
+                aria-label="Viber"
+              >
+                <FaViber className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://wa.me/380506782481" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-800 p-3 rounded-full hover:bg-green-500 transition text-white"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp className="w-5 h-5" />
               </a>
             </div>
           </div>

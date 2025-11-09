@@ -20,10 +20,14 @@ function Hero({ onOpenModal }) {
             </button>
           </div>
 
-          {/* Right Side - Illustration Placeholder */}
+          {/* Right Side - Image */}
           <div className="order-1 lg:order-2">
-            <div className="bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-2xl h-96 md:h-[500px] flex items-center justify-center shadow-2xl">
-              <span className="text-white text-xl font-semibold">Illustration Placeholder</span>
+            <div className="rounded-2xl h-96 md:h-[500px] overflow-hidden ">
+              <img 
+                src="/bg.jpg.webp" 
+                alt="Веб-розробка та дизайн сайтів" 
+                className="w-full h-full "
+              />
             </div>
           </div>
         </div>
