@@ -22,11 +22,11 @@ function Hero({ onOpenModal }) {
 
           {/* Right Side - Image */}
           <div className="order-1 lg:order-2">
-            <div className="rounded-2xl h-96 md:h-[500px] overflow-hidden ">
+            <div className="rounded-2xl h-96 md:h-[500px] overflow-hidden">
               <img 
                 src="/bg.jpg.webp" 
                 alt="Веб-розробка та дизайн сайтів" 
-                className="w-full h-full "
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>
