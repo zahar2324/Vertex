@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 function Reviews() {
   const reviews = [
@@ -77,7 +75,7 @@ function Reviews() {
 
         <div className="max-w-6xl mx-auto">
           <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
+            modules={[Navigation, Autoplay]}
             spaceBetween={30}
             slidesPerView={1}
             breakpoints={{
@@ -92,10 +90,7 @@ function Reviews() {
               nextEl: '.swiper-button-next-custom',
               prevEl: '.swiper-button-prev-custom',
             }}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
+            pagination={false}
             autoplay={{
               delay: 5000,
               disableOnInteraction: false,

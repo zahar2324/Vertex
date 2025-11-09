@@ -26,7 +26,7 @@ function Hero({ onOpenModal }) {
               <img 
                 src="/bg.jpg.webp" 
                 alt="Веб-розробка та дизайн сайтів" 
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full  object-center"
               />
             </div>
           </div>
