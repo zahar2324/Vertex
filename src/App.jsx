@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Analytics } from '@vercel/analytics/react'
-import { Helmet } from 'react-helmet-async'
+//import { Helmet } from 'react-helmet-async'
 import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <Helmet>
+     {/* <Helmet>*/}
         <title>Vertex - Діджитал Агенція | Створення Сайтів та Веб-Розробка в Україні</title>
         <meta 
           name="description" 
@@ -46,7 +46,7 @@ function App() {
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://vertex-web.com.ua" />
-      </Helmet>
+     {/* </Helmet>*/}
       <div className="min-h-screen">
         <Header onOpenModal={openModal} />
         <Hero onOpenModal={openModal} />
